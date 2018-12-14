@@ -4,3 +4,5 @@
 .nvmrc
 .storybook
 .travis.yml
+/storybook-static
+/coverage
