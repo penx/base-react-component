@@ -1,4 +1,10 @@
-import { configure } from '@storybook/react';
+import { addParameters, configure } from '@storybook/react';
+
+addParameters({
+  options: {
+    name: 'placeholder',
+  }
+})
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src/stories', true, /.stories.js$/);
