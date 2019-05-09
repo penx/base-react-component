@@ -2,13 +2,27 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+// import { linkTo } from '@storybook/addon-links';
 
-import { Welcome } from '@storybook/react/demo';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-import Example from '..';
+// import { Welcome } from '@storybook/react/demo';
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+import DevelopmentWarnings from '..';
 
-storiesOf('Example', module)
-  .add('default', () => <Example />);
+// storiesOf('Welcome', module).add('to Storybook', () => (
+//   <Welcome showApp={linkTo('Button')} />
+// ));
+
+const stories = storiesOf('DevelopmentWarnings', module);
+
+stories.addDecorator(withKnobs);
+
+stories.add('default', () => (
+  <DevelopmentWarnings
+    dev={boolean('dev', false)}
+    message={text('message', undefined)}
+  >
+    <h1>Some App</h1>
+  </DevelopmentWarnings>
+));

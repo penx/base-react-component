@@ -1,2 +1,31 @@
+# Smarter Click
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/penx/base-react-component.svg)](https://greenkeeper.io/)
+## React Development Warnings
+
+#### Usage
+
+(with create-react-app)
+
+```
+import React from 'react';
+import { render } from 'react-dom';
+import DevelopmentWarnings from '@smarter-click/react-development-warnings';
+
+const App = () => {
+
+  const Foo = () => { /* some react component */}
+
+  return process.env.NODE_ENV === 'development'
+    ? (
+      <DevelopmentWarnings
+        message="Custom message"
+        dev
+      >
+        <Foo />
+      </DevelopmentWarnings>
+    )
+    : <Foo />;
+};
+
+render(<App>, document.getElementById('root'));
+```
