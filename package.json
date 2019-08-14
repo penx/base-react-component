@@ -58,7 +58,7 @@
     "jest": "^23.6.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.3",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.7.0"
   },
   "peerDependencies": {
     "react": ">=15"
