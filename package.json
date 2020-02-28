@@ -56,7 +56,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
-    "react": "^16.6.0",
+    "react": "^16.13.0",
     "react-dom": "^16.6.3",
     "rimraf": "^2.6.2"
   },
